@@ -1,0 +1,33 @@
+<ion-nav-bar class="has-tabs-top primary-color">
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+  <ion-nav-buttons side="right"> <!-- right -->
+    <button class="button button-icon icon search-icon"></button>
+    <button class="button button-icon icon favorite-icon"></button>
+    <button class="button button-icon icon menu-icon"></button>
+  </ion-nav-buttons>
+</ion-nav-bar>
+
+<ion-tabs class="tabs-striped tabs-top tabs-background-primary-color tabs-color-light">
+
+  <!-- Home Tab -->
+  <ion-tab href="#/tab/home" icon-on="home-icon-custom-on" icon-off="home-icon-custom-off">
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Maps Tab -->
+  <ion-tab href="#/tab/map" icon-on="map-icon-custom-on" icon-off="map-icon-custom-off">
+    <ion-nav-view name="tab-map"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Profile Tab -->
+  <ion-tab href="#/tab/profile" icon-on="profile-icon-custom-on" icon-off="profile-icon-custom-off">
+    <ion-nav-view name="tab-profile"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Comming Soon Tab -->
+  <ion-tab href="#/tab/comingsoon" icon-on="comingsoon-icon-custom-on" icon-off="comingsoon-icon-custom-off">
+    <ion-nav-view name="tab-comingsoon"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

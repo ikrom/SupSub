@@ -1,0 +1,53 @@
+<ion-view view-title="Home">
+  <ion-content class="padding">
+      <section id="cd-timeline" class="cd-container">
+        <div ng-repeat="activity in timeline">
+          <div class="cd-timeline-block">
+          	<!-- CUSTOMIZE YOUR STYLE USING DEFAULT IONIC VALUES SUCH AS POSITIVE, CALM, BALANCED,... -->
+      		<div class="cd-timeline-picture text-center dark">
+              <img ng-src="/img/{{activity.profilePicture}}">
+            </div>
+			<div class="cd-timeline-category text-center">
+              <img ng-src="/img/category_accident.png"ng-if="activity.category=='accident'">
+              <img ng-src="/img/category_competition.png"ng-if="activity.category=='competition'">
+              <img ng-src="/img/category_culinary.png"ng-if="activity.category=='culinary'">
+              <img ng-src="/img/category_entertaiment.png"ng-if="activity.category=='entertaiment'">
+              <img ng-src="/img/category_sport.png"ng-if="activity.category=='sport'">
+              <img ng-src="/img/category_traffic.png"ng-if="activity.category=='traffic'">
+
+            </div>	
+            
+            <!-- CUSTOMIZE YOUR STYLE USING DEFAULT IONIC VALUES SUCH AS POSITIVE, CALM, BALANCED,... -->
+            <!-- <div class="cd-timeline-content padding dark">
+            	<h5 class="marginBottom0 marginTop0">{{activity.title}}</h5>
+            	<p class="marginTop5 cd-author">by {{activity.author}} on {{activity.date | date: "d MMM"}}</p>
+            	<p class="timelineText">{{activity.text}}</p>
+            </div> -->
+            <div class="cd-timeline-content">
+            	<h5 class="cd-timeline-content-bold">{{activity.eventName}}</h5>
+            	<h5>{{activity.description}} at <span class="cd-timeline-content-bold">{{activity.eventPlace}}</span></h5>
+            	<h5>{{activity.date}}</h5>	
+            </div>
+            <div class="cd-favorite-button" ng-if="activity.img=='false'">
+            	<img ng-if="activity.favorite=='false'" ng-src="/img/button_favorite_img.png" alt="" class="timeline-favorite-button">
+            	<img ng-if="activity.favorite=='true'"ng-src="/img/button_favorite_img_clicked.png" alt="" class="timeline-favorite-button">
+            </div>
+            <div class="timeline-content-img" ng-if="activity.img=='true'">
+            	<img ng-src="/img/adam.jpg" alt="" class="content-img">
+            	<img ng-if="activity.favorite=='false'" ng-src="/img/button_favorite_img.png" alt="" class="timeline-favorite-button" ng-click="changeFavorite($index)">
+            	<img ng-if="activity.favorite=='true'" ng-src="/img/button_favorite_img_clicked.png" alt="" class="timeline-favorite-button" ng-click="changeFavorite($index)">
+            </div>
+            <div class="timeline-comment-section">
+            	<h5 ng-if="activity.favorite=='false'" class="sum-favorite green"><span class="sum-favorite-button"><img ng-src="/img/favorite_comment.png"></span>{{activity.sumFavorite}} favorites</h5>
+            	<h5 ng-if="activity.favorite=='true'" class="sum-favorite green"><span class="sum-favorite-button"><img ng-src="/img/favorite_comment_clicked.png"></span>{{activity.sumFavorite}} favorites</h5>
+            	<h5 ><span class="green">{{activity.username}}</span> {{activity.caption}}</h5>
+        		<h5 class="grey"><span class="green">{{activity.comments[restComment[$index]].username}}</span> {{activity.comments[restComment[$index]].comment}}</h5>
+        		<h5 class="grey"><span class="green">{{activity.comments[restComment[$index]+1].username}}</span> {{activity.comments[restComment[$index]+1].comment}}</h5>
+            	
+            	<h5 class="grey" ng-if="restComment[$index]>0"><span class="more-button">...</span> {{restComment[$index]}} more comments</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+  </ion-content>
+</ion-view>
