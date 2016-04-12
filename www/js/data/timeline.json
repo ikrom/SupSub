@@ -1,21 +1,21 @@
 [{
-    "eventName": "WTF Market",
-    "eventPlace": "Tunjungan Plaza",
-    "description" : "festival",
-  	"date": "1 januari 2013",
-  	"category": "entertaiment",
-  	"profilePicture":"perry.png",
-  	"img": "true",
-  	"favorite":"true",
-    "sumFavorite": "28",
-    "username": "Skeletenkey",
-    "caption":"yaay cakes!",
-  	"comments": [{
-  		"username": "Ladylexy",
-  		"comment": "wah asik nih kayaknya 0"
-  	}
-  	]
-  },{
+  "eventName": "WTF Market",
+  "eventPlace": "Tunjungan Plaza",
+  "description" : "festival",
+	"date": "1 januari 2013",
+	"category": "entertaiment",
+	"profilePicture":"perry.png",
+	"img": "true",
+	"favorite":"true",
+  "sumFavorite": "28",
+  "username": "Skeletenkey",
+  "caption":"yaay cakes!",
+	"comments": [{
+		"username": "Ladylexy",
+		"comment": "wah asik nih kayaknya 0"
+	}]
+}]
+,{
     "eventName": "Demonstration",
     "eventPlace": "Bundaran Waru",
     "description" : "festival",
